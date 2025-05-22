@@ -1,0 +1,268 @@
+/* General Body */
+body {
+  background-color: #f8f5f0;
+  color: #2c2c2c;
+  font-family: Arial, sans-serif;
+}
+
+/* Navbar */
+.navbar {
+  background-color: #2e7d32;
+}
+
+.navbar-brand, .nav-link {
+  color: #fff !important;
+}
+
+.navbar-logo {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+/* Hero Section */
+.hero-section {
+  padding: 60px 0;
+  background-color: #fff;
+  text-align: center;
+}
+
+.hero-section h1 {
+  font-size: 3rem;
+  color: #2e7d32;
+}
+
+.hero-section p {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+
+/* Main Button */
+.btn-main {
+  background-color: #e65100;
+  color: #fff;
+  border: none;
+}
+
+.btn-main:hover {
+  background-color: #bfa443;
+  color: #fff;
+}
+
+/* Section Titles */
+.section-title {
+  color: #2e7d32;
+  font-weight: bold;
+  margin-bottom: 40px;
+}
+
+/* Ethnic Group Cards */
+.card {
+  border: none;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+.card-img-top {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.card-body {
+  padding: 20px;
+  background-color: #fff;
+}
+
+/* Footer */
+footer {
+  background-color: #2e7d32;
+  color: #fff;
+  padding: 20px 0;
+  margin-top: 40px;
+  text-align: center;
+}
+/* General Styles */
+body {
+    background-color: #f8f5f0;
+    color: #2c2c2c;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #2e7d32;
+    padding: 10px 0;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    margin: 0 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Profile Header */
+
+.profile-header {
+    text-align: center;
+    padding: 40px 20px;
+    background-color: #f8f5f0;
+}
+
+.profile-header h1 {
+    color: #2e7d32;
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+/* Hero Image Styling */
+.hero-image {
+    width: 100%;
+    /* max-width:00px; */
+    height: auto;
+    border-radius: 12px;
+    object-fit: cover;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.hero-image:hover {
+    transform: scale(1.02);
+}
+
+/* Overview Section with Cards */
+.overview {
+    padding: 30px 10%;
+    text-align: center;
+}
+
+.overview h2 {
+    font-size: 36px;
+    color: #2e7d32;
+    margin-bottom: 30px;
+}
+
+.card-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.card {
+    background-color: #ffffff;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.card-content {
+    padding: 15px;
+}
+
+.card h3 {
+    font-size: 22px;
+    color: #2e7d32;
+}
+
+.card p {
+    font-size: 16px;
+    color: #2c2c2c;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.read-more-btn {
+    display: inline-block;
+    background-color: #e65100;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.read-more-btn:hover {
+    background-color: #bfa443;
+}
+
+/* Hover Effect */
+.card:hover {
+    transform: translateY(-10px);
+}
+footer {
+  background-color: #2e7d32;
+  color: #fff;
+  padding: 20px 0;
+  margin-top: 40px;
+  text-align: center;
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+    .card-container {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .card-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .overview h2 {
+        font-size: 30px;
+    }
+
+    .card h3 {
+        font-size: 18px;
+    }
+
+    .card p {
+        font-size: 14px;
+    }
+
+
+}
+
+@media (max-width: 480px) {
+    .card-container {
+        grid-template-columns: 1fr;
+    }
+
+    .overview h2 {
+        font-size: 26px;
+    }
+}
