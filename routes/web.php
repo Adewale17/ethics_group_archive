@@ -25,8 +25,15 @@ Route::middleware(['web', 'check.auth'])->prefix('admin')->group(function () {
     Route::get('/login', [AdminsController::class, 'viewLogin'])->name('viewLogin');
     Route::post('/login', [AdminsController::class, 'checkLogin'])->name('checkLogin');
 });
+
 Route::middleware(['web', 'auth.admin'])->prefix('admin')->group(function () {
     Route::get('/index', [AdminsController::class, 'index'])->name('adminDashboard');
+    //Admins
+    Route::get('/all-admins', [AdminsController::class, 'allAdmins'])->name('allAdmins');
+    Route::get('/admins-create', [AdminsController::class, 'createAdmins'])->name('create.admins');
+    Route::post('/admins-create', [AdminsController::class, 'storeAdmins'])->name('store.admins');
+
+
 });
 
 
