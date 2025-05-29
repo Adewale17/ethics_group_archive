@@ -10,25 +10,33 @@
                     </p>
                     @endif
                 </div>
-                <h5 class="card-title mb-4 d-inline">Admins</h5>
-                <a href="{{ route('create.admins') }}" class="btn btn-primary mb-4 text-center float-right">Create
-                    Admins</a>
+                <h5 class="card-title mb-4 d-inline">Foods</h5>
+                <a href="{{ route('create.archives') }}" class="btn btn-primary mb-4 text-center float-right">Create
+                    Archive</a>
+
                 <table class="table">
                     <thead>
-
                         <tr>
-                            <th scope="col">S/N</th>
-                            <th scope="col">Name</th>
-                            <th scope="col">Email</th>
-                            <th scope="col">Action</th>
+                            <th scope="col">No.</th>
+                            <th scope="col">Title</th>
+                            <th scope="col">Description</th>
+                            <th scope="col">image</th>
+                            <th scope="col">Ethic</th>
+                            <th scope="col">Edit</th>
+                            <th scope="col">Delete</th>
                         </tr>
                     </thead>
                     <tbody>
-                        @foreach ($admins as $admin )
+                        @foreach ($archives as $archive)
                         <tr>
                             <th scope="row">{{ $loop->iteration }}</th>
-                            <td>{{ $admin->name}}</td>
-                            <td>{{ $admin->email }}</td>
+                            <td>{{ $archive->title }}</td>
+                            <td>{{ $archive->description }}</td>
+                            <td><img height="60" width="60" src="{{asset('assets/images/'.$archive->image) }}"
+                                    alt="Ifa Religion"></td>
+                            <td>{{ $archive->ethic_group }}</td>
+                            <td><a href="{{ route('edit.archives', $archive->id) }}"
+                                    class="btn btn-success  text-center ">Edit</a></td>
                             <td>
                                 <form action="{{ route('delete.admin', $admin->id) }}" method="POST"
                                     style="display:inline;">
@@ -37,10 +45,8 @@
                                         onclick="return confirm('Are you sure you want to delete?')">Delete</button>
                                 </form>
                             </td>
-
                         </tr>
                         @endforeach
-
                     </tbody>
                 </table>
             </div>

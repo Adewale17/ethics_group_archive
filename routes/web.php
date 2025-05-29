@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\AdminsController;
+use App\Http\Controllers\EthicsController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
@@ -11,6 +12,12 @@ Route::get('/', function () {
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
+
+//Ethics Group
+Route::get('/igbo', [EthicsController::class, 'igbo'])->name('igbo');
+Route::get('/yoruba', [EthicsController::class, 'yoruba'])->name('yoruba');
+Route::get('/hausa', [EthicsController::class, 'hausa'])->name('hausa');
+
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
@@ -32,6 +39,15 @@ Route::middleware(['web', 'auth.admin'])->prefix('admin')->group(function () {
     Route::get('/all-admins', [AdminsController::class, 'allAdmins'])->name('allAdmins');
     Route::get('/admins-create', [AdminsController::class, 'createAdmins'])->name('create.admins');
     Route::post('/admins-create', [AdminsController::class, 'storeAdmins'])->name('store.admins');
+    Route::post('/delete-admin/{id}', [AdminsController::class, 'deleteAdmin'])->name('delete.admin');
+
+    //create Archive
+    Route::get('/all-archives', [AdminsController::class, 'allArchives'])->name('all.archives');
+    Route::get('/create-archive', [AdminsController::class, 'createArchive'])->name('create.archives');
+    Route::post('/create-archive', [AdminsController::class, 'storeArchive'])->name('store.archives');
+    Route::get('/edit-archive/{id}', [AdminsController::class, 'editArchive'])->name('edit.archives');
+    Route::put('/edit-archive/{id}', [AdminsController::class, 'updateArchive'])->name('update.archives');
+    Route::post('/delete-archive/{id}', [AdminsController::class, 'deleteArchive'])->name('delete.archive');
 
 
 });

@@ -11,7 +11,7 @@
         <h2>Explore Yoruba Culture</h2>
         <div class="card-container">
             <div class="card">
-                <img src="images/yoruba1.jpeg" alt="Ifa Religion">
+                <img src="{{asset('assets/images/yoruba1.jpeg') }}" alt="Ifa Religion">
                 <div class="card-content">
                     <h3>Ifa Religion</h3>
                     <p>Ifa is a system of divination and a central aspect of Yoruba spirituality...</p>
@@ -19,7 +19,7 @@
                 </div>
             </div>
             <div class="card">
-                <img src="images/yoruba2.png" alt="Yoruba Language">
+                <img src="{{asset('assets/images/yoruba2.png') }}" alt="Yoruba Language">
                 <div class="card-content">
                     <h3>Yoruba Language</h3>
                     <p>The Yoruba language is rich in proverbs, poetry, and oral traditions...</p>
@@ -27,7 +27,7 @@
                 </div>
             </div>
             <div class="card">
-                <img src="images/yoruba3.png" alt="Yoruba Clothing">
+                <img src="{{asset('assets/images/yoruba3.png') }}" alt="Yoruba Clothing">
                 <div class="card-content">
                     <h3>Yoruba Clothing</h3>
                     <p>Traditional Yoruba clothing is known for its vibrant colors and intricate designs...</p>

@@ -31,9 +31,9 @@
                             Ethnic Groups
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="ethnicDropdown">
-                            <li><a class="dropdown-item" href="yoruba.html">Yoruba</a></li>
-                            <li><a class="dropdown-item" href="hausa.html">Hausa</a></li>
-                            <li><a class="dropdown-item" href="igbo.html">Igbo</a></li>
+                            <li><a class="dropdown-item" href="{{ route('yoruba') }}">Yoruba</a></li>
+                            <li><a class="dropdown-item" href="{{ route('hausa') }}">Hausa</a></li>
+                            <li><a class="dropdown-item" href="{{ route('igbo') }}">Igbo</a></li>
                         </ul>
                     </li>
 

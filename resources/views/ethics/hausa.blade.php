@@ -12,7 +12,7 @@
   <h2>Explore Hausa Culture</h2>
   <div class="card-container">
     <div class="card">
-      <img src="images/hausa1.jpg" alt="Hausa Architecture">
+      <img src="{{asset('assets/images/hausa1.jpg') }}" alt="Hausa Architecture">
       <div class="card-content">
         <h3>Traditional Architecture</h3>
         <p>Hausa architecture is known for its distinctive mud buildings, geometric designs, and ancient city walls...</p>
@@ -20,7 +20,7 @@
       </div>
     </div>
     <div class="card">
-      <img src="images/hausa2.jpg" alt="Hausa Language">
+      <img src="{{asset('assets/images/hausa2.jpg') }}" alt="Hausa Language">
       <div class="card-content">
         <h3>Hausa Language</h3>
         <p>Spoken widely across West Africa, the Hausa language is a major communication tool and cultural identity marker...</p>
