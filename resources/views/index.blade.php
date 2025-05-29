@@ -35,7 +35,7 @@
             </div>
             <div class="col-md-4 mb-4">
                 <div class="card h-100">
-                    <img src={{ 'assets/images/igbo1.jpeg' }} class="card-img-top" alt="Igbo Culture">
+                    <img src={{ asset('assets/images/igbo2.jpeg') }} class="card-img-top" alt="Igbo Culture">
                     <div class="card-body">
                         <h5 class="card-title">Igbo</h5>
                         <p class="card-text">Known for entrepreneurship, festivals, and rich oral history.</p>

@@ -222,6 +222,28 @@ nav ul li a:hover {
 .card:hover {
     transform: translateY(-10px);
 }
+.card-detail {
+    max-width: 800px;
+    margin: auto;
+    padding: 20px;
+    background: #fff;
+    box-shadow: 0 0 15px rgba(0,0,0,0.1);
+    border-radius: 8px;
+}
+
+.card-detail img {
+    width: 100%;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.card-detail h2 {
+    color: #006400;
+}
+
+.card-detail p {
+    line-height: 1.6;
+}
 footer {
   background-color: #2e7d32;
   color: #fff;

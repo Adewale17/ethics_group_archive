@@ -15,8 +15,11 @@ Route::get('/dashboard', function () {
 
 //Ethics Group
 Route::get('/igbo', [EthicsController::class, 'igbo'])->name('igbo');
+Route::get('/igbo/{id}', [EthicsController::class, 'igboShow'])->name('igbo.show');
 Route::get('/yoruba', [EthicsController::class, 'yoruba'])->name('yoruba');
+Route::get('/yoruba/{id}', [EthicsController::class, 'yorubaShow'])->name('yoruba.show');
 Route::get('/hausa', [EthicsController::class, 'hausa'])->name('hausa');
+Route::get('/hausa/{id}', [EthicsController::class, 'hausaShow'])->name('hausa.show');
 
 
 Route::middleware('auth')->group(function () {

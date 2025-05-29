@@ -9,7 +9,7 @@
             <div class="card-content">
                 <h3>{{ $archive->title }}</h3>
                 <p>{{$archive->description}}...</p>
-                <a href="igbo-architecture.php" class="read-more-btn">Read More</a>
+                <a href="{{ route('igbo.show', $archive->id) }}" class="read-more-btn">Read More</a>
             </div>
         </div>
         @endforeach
