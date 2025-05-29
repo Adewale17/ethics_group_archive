@@ -18,13 +18,22 @@ class AdminsController extends Controller
     }
     public function checkLogin(Request $request)
     {
+        $validate = $request->validate([
+            'email' => ['required', 'string', 'email'],
+            'password' => ['required', 'string']
+
+        ]);
         $remember_me = $request->has('remember_me') ? true : false;
 
-        if (auth()->guard('admin')->attempt(['email' => $request->input("email"), 'password' => $request->input("password")], $remember_me)) {
-
+        if (
+            auth()->guard('admin')->attempt([
+                'email' => $validate['email'],
+                'password' => $validate['password']
+            ], $remember_me)
+        ) {
             return redirect()->route('adminDashboard');
         }
-        return redirect()->back()->with(['error' => 'error logging in']);
+        return redirect()->back()->with(['error' => 'Incorrect username or password']);
 
     }
 
@@ -42,7 +51,7 @@ class AdminsController extends Controller
         $request->session()->invalidate();
         $request->session()->regenerateToken();
 
-        return view('admins.login');
+        return redirect()->route('checkLogin');
     }
 
     public function allAdmins()
@@ -82,7 +91,7 @@ class AdminsController extends Controller
 
     public function allArchives()
     {
-        $archives = Archive::select()->orderBy('id', 'desc')->get();
+        $archives = Archive::orderBy('id', 'desc')->paginate(5);
         return view('admins.all-archives', compact('archives'));
     }
 

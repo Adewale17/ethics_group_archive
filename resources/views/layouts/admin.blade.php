@@ -50,8 +50,8 @@
                             <a class="nav-link" href="{{ route('viewLogin') }}">login
                             </a>
                         </li>
-                       @endguest
-                       @auth('admin')
+                        @endguest
+                        @auth('admin')
 
                         <li class="nav-item dropdown">
                             <a class="nav-link  dropdown-toggle" href="#" id="navbarDropdown" role="button"
@@ -63,10 +63,12 @@
                                     onclick="event.preventDefault(); document.getElementById('logoutForm').submit();">
                                     Logout
                                 </a>
-                                <form id="logoutForm" action="{{ route('adminLogout')}}" method="POST" class="d-none">
+
+                                <form id="logoutForm" action="{{ route('adminLogout') }}" method="POST"
+                                    style="display: none;">
                                     @csrf
                                 </form>
-
+                            </div>
                         </li>
                         @endauth
 

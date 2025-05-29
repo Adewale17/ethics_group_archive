@@ -38,7 +38,7 @@
                             <td><a href="{{ route('edit.archives', $archive->id) }}"
                                     class="btn btn-success  text-center ">Edit</a></td>
                             <td>
-                                <form action="{{ route('delete.admin', $admin->id) }}" method="POST"
+                                <form action="{{ route('delete.admin', $archive->id) }}" method="POST"
                                     style="display:inline;">
                                     @csrf
                                     <button type="submit" class="btn btn-danger"
@@ -46,9 +46,14 @@
                                 </form>
                             </td>
                         </tr>
+
                         @endforeach
                     </tbody>
                 </table>
+                <div class="d-flex justify-content-center">
+                    {{ $archives->links() }}
+                </div>
+
             </div>
         </div>
     </div>

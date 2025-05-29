@@ -2,13 +2,15 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Archive;
 use Illuminate\Http\Request;
 
 class EthicsController extends Controller
 {
     public function igbo()
     {
-        return view('ethics.igbo');
+        $archives = Archive::where('ethnic_group', 'yoruba')->get();
+        return view('ethics.igbo', compact('archives'));
     }
 
     public function hausa()
