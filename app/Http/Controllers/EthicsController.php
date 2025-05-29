@@ -9,7 +9,7 @@ class EthicsController extends Controller
 {
     public function igbo()
     {
-        $archives = Archive::where('ethnic_group', 'yoruba')->get();
+        $archives = Archive::where('ethic_group', 'Igbo')->get();
         return view('ethics.igbo', compact('archives'));
     }
 
@@ -20,7 +20,8 @@ class EthicsController extends Controller
 
     public function yoruba()
     {
-        return view('ethics.yoruba');
+        $archives = Archive::where('ethic_group', 'Yoruba')->get();
+        return view('ethics.yoruba', compact('archives'));
     }
 
 }
